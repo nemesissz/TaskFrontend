@@ -1,0 +1,365 @@
+/* STATİSTİKA KARTLARI */
+.stats-cards {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* HƏR KART */
+.stats-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid;
+}
+
+.stats-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ÜMUMI TAPŞIRIQ */
+.stats-all {
+  background: rgba(78, 205, 196, 0.06);
+  border-color: rgba(78, 205, 196, 0.2);
+}
+
+.stats-all:hover {
+  background: rgba(78, 205, 196, 0.12);
+  border-color: rgba(78, 205, 196, 0.4);
+}
+
+.stats-all .stats-icon-box {
+  background: rgba(78, 205, 196, 0.12);
+  border: 1px solid rgba(78, 205, 196, 0.25);
+}
+
+.stats-all .stats-icon {
+  color: #4ECDC4;
+}
+
+.stats-all .stats-sayi {
+  color: #4ECDC4;
+}
+
+/* AKTİV TAPŞIRIQ */
+.stats-active {
+  background: rgba(255, 193, 7, 0.06);
+  border-color: rgba(255, 193, 7, 0.2);
+}
+
+.stats-active:hover {
+  background: rgba(255, 193, 7, 0.12);
+  border-color: rgba(255, 193, 7, 0.4);
+}
+
+.stats-active .stats-icon-box {
+  background: rgba(255, 193, 7, 0.12);
+  border: 1px solid rgba(255, 193, 7, 0.25);
+}
+
+.stats-active .stats-icon {
+  color: #ffc107;
+}
+
+.stats-active .stats-sayi {
+  color: #ffc107;
+}
+
+/* TAMAMLANMIŞ */
+.stats-completed {
+  background: rgba(40, 167, 69, 0.06);
+  border-color: rgba(40, 167, 69, 0.2);
+}
+
+.stats-completed:hover {
+  background: rgba(40, 167, 69, 0.12);
+  border-color: rgba(40, 167, 69, 0.4);
+}
+
+.stats-completed .stats-icon-box {
+  background: rgba(40, 167, 69, 0.12);
+  border: 1px solid rgba(40, 167, 69, 0.25);
+}
+
+.stats-completed .stats-icon {
+  color: #5dd87a;
+}
+
+.stats-completed .stats-sayi {
+  color: #5dd87a;
+}
+
+/* İKON QUTUSU */
+.stats-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stats-icon {
+  font-size: 20px;
+}
+
+/* MƏLUMAT */
+.stats-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stats-sayi {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stats-ad {
+  font-size: 12px;
+  color: #8BB8B5;
+  font-weight: 500;
+}
+
+/* MODAL OVERLAY */
+.stats-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+}
+
+/* MODAL QUTUSU */
+.stats-modal-box {
+  width: 600px;
+  max-height: 80vh;
+  background: linear-gradient(180deg, #0D2137 0%, #0F1923 100%);
+  border: 1px solid rgba(78, 205, 196, 0.2);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* MODAL BAŞLIQ */
+.stats-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 25px;
+  background: rgba(78, 205, 196, 0.05);
+  border-bottom: 1px solid rgba(78, 205, 196, 0.1);
+  flex-shrink: 0;
+}
+
+.stats-modal-header h3 {
+  margin: 0;
+  color: #4ECDC4;
+  font-size: 17px;
+}
+
+.stats-modal-close {
+  background: none;
+  border: 1px solid rgba(78, 205, 196, 0.3);
+  color: #4ECDC4;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.stats-modal-close:hover {
+  background: rgba(78, 205, 196, 0.1);
+}
+
+/* MODAL İÇƏRİK */
+.stats-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 25px;
+}
+
+.stats-bos {
+  text-align: center;
+  color: rgba(139, 184, 181, 0.4);
+  font-size: 14px;
+  padding: 40px;
+  font-style: italic;
+  margin: 0;
+}
+
+/* TAPŞIRIQ SİYAHISI */
+.stats-task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* HƏR TAPŞIRIQ */
+.stats-task-item {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid;
+}
+
+.stats-task-item.aktiv {
+  background: rgba(255, 193, 7, 0.04);
+  border-color: rgba(255, 193, 7, 0.15);
+}
+
+.stats-task-item.tamamlandi {
+  background: rgba(40, 167, 69, 0.04);
+  border-color: rgba(40, 167, 69, 0.15);
+}
+
+/* TAPŞIRIQ BAŞLIĞI */
+.stats-task-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stats-task-no {
+  font-size: 12px;
+  font-weight: 700;
+  color: #8BB8B5;
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.stats-task-ad {
+  flex: 1;
+  font-weight: 600;
+  font-size: 13px;
+  color: #E8F4F3;
+}
+
+.stats-task-status {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.status-active {
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.25);
+}
+
+.status-done {
+  background: rgba(40, 167, 69, 0.1);
+  color: #5dd87a;
+  border: 1px solid rgba(40, 167, 69, 0.25);
+}
+
+/* TAPŞIRIQ DETALLARı */
+.stats-task-details {
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stats-task-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.stats-task-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #8BB8B5;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  flex-shrink: 0;
+  min-width: 70px;
+}
+
+.stats-task-value {
+  font-size: 12px;
+  color: #E8F4F3;
+  opacity: 0.8;
+}
+
+.stats-task-value.green {
+  color: #5dd87a;
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* ŞƏXSLƏR */
+.stats-shexsler {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.stats-shexs {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid;
+}
+
+.stats-shexs.status-gozlenir {
+  background: rgba(255, 193, 7, 0.08);
+  color: #ffc107;
+  border-color: rgba(255, 193, 7, 0.25);
+}
+
+.stats-shexs.status-icrada {
+  background: rgba(0, 123, 255, 0.08);
+  color: #4da6ff;
+  border-color: rgba(0, 123, 255, 0.25);
+}
+
+.stats-shexs.status-tamamlandi {
+  background: rgba(40, 167, 69, 0.08);
+  color: #5dd87a;
+  border-color: rgba(40, 167, 69, 0.25);
+}
+
+/* SCROLLBAR */
+.stats-modal-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.stats-modal-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.stats-modal-body::-webkit-scrollbar-thumb {
+  background: rgba(78, 205, 196, 0.2);
+  border-radius: 2px;
+}
+
+.stats-modal-body::-webkit-scrollbar-thumb:hover {
+  background: rgba(78, 205, 196, 0.4);
+}

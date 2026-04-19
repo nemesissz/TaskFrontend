@@ -1,0 +1,425 @@
+/* MODAL OVERLAY */
+.task-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+/* MODAL QUTUSU */
+.task-modal-box {
+  width: 50%;
+  height: 100vh;
+  background: linear-gradient(180deg, #0D2137 0%, #0F1923 100%);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-left: 1px solid rgba(78, 205, 196, 0.2);
+  border-right: 1px solid rgba(78, 205, 196, 0.2);
+}
+
+/* MODAL BAŞLIQ */
+.task-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 25px;
+  background: rgba(78, 205, 196, 0.05);
+  border-bottom: 1px solid rgba(78, 205, 196, 0.1);
+  flex-shrink: 0;
+}
+
+.task-modal-header h3 {
+  margin: 0;
+  color: #4ECDC4;
+  font-size: 17px;
+  letter-spacing: 0.3px;
+}
+
+.task-modal-close {
+  background: none;
+  border: 1px solid rgba(78, 205, 196, 0.3);
+  color: #4ECDC4;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.task-modal-close:hover {
+  background: rgba(78, 205, 196, 0.1);
+}
+
+/* MODAL İÇƏRİK */
+.task-modal-body {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* FORM QRUPU */
+.task-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-form-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #8BB8B5;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.label-icon {
+  font-size: 12px;
+  color: #4ECDC4;
+}
+
+/* VERƏN QUTUSU */
+.veren-box {
+  padding: 10px 14px;
+  background: rgba(78, 205, 196, 0.06);
+  border: 1px solid rgba(78, 205, 196, 0.15);
+  border-radius: 8px;
+  color: #4ECDC4;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* INPUT */
+.task-form-group input[type="text"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid rgba(78, 205, 196, 0.15);
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.3s;
+  background: rgba(255, 255, 255, 0.04);
+  color: #E8F4F3;
+  box-sizing: border-box;
+}
+
+.task-form-group input[type="text"]:focus {
+  border-color: rgba(78, 205, 196, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.06);
+}
+
+.task-form-group input[type="text"]::placeholder {
+  color: rgba(139, 184, 181, 0.3);
+}
+
+/* TEXTAREA */
+.task-form-group textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px 14px;
+  border: 1px solid rgba(78, 205, 196, 0.15);
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+  transition: all 0.3s;
+  background: rgba(255, 255, 255, 0.04);
+  color: #E8F4F3;
+  box-sizing: border-box;
+}
+
+.task-form-group textarea:focus {
+  border-color: rgba(78, 205, 196, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.06);
+}
+
+.task-form-group textarea::placeholder {
+  color: rgba(139, 184, 181, 0.3);
+}
+
+/* ŞƏXSLƏR SİYAHISI */
+.shexsler-list {
+  border: 1px solid rgba(78, 205, 196, 0.15);
+  border-radius: 8px;
+  max-height: 180px;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.shexs-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-bottom: 1px solid rgba(78, 205, 196, 0.06);
+}
+
+.shexs-item:last-child {
+  border-bottom: none;
+}
+
+.shexs-item:hover {
+  background: rgba(78, 205, 196, 0.05);
+}
+
+.shexs-item.selected {
+  background: rgba(78, 205, 196, 0.08);
+}
+
+.shexs-item.select-all {
+  background: rgba(78, 205, 196, 0.05);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(78, 205, 196, 0.15) !important;
+}
+
+.shexs-item input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  accent-color: #4ECDC4;
+  cursor: pointer;
+}
+
+.shexs-name {
+  flex: 1;
+  font-size: 13px;
+  color: #E8F4F3;
+}
+
+.shexs-rol {
+  font-size: 11px;
+  color: #4ECDC4;
+  padding: 2px 8px;
+  border: 1px solid rgba(78, 205, 196, 0.2);
+  border-radius: 10px;
+  background: rgba(78, 205, 196, 0.06);
+}
+
+.no-users {
+  padding: 15px;
+  text-align: center;
+  color: rgba(139, 184, 181, 0.4);
+  font-size: 13px;
+  margin: 0;
+}
+
+/* TARİX */
+.task-form-group input[type="date"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid rgba(78, 205, 196, 0.15);
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.3s;
+  background: rgba(255, 255, 255, 0.04);
+  color: #E8F4F3;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.task-form-group input[type="date"]:focus {
+  border-color: rgba(78, 205, 196, 0.4);
+  box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.06);
+}
+
+/* FAYL YÜKLƏMƏ */
+.deadline-file-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.deadline-group {
+  flex: 0 0 200px;
+}
+
+.file-group {
+  flex: 1;
+}
+
+.file-upload-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.file-upload-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(78, 205, 196, 0.1);
+  color: #4ECDC4;
+  border: 1px solid rgba(78, 205, 196, 0.25);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.file-upload-btn:hover {
+  background: rgba(78, 205, 196, 0.18);
+  border-color: rgba(78, 205, 196, 0.4);
+}
+
+.file-hint {
+  font-size: 11px;
+  color: rgba(139, 184, 181, 0.4);
+}
+
+/* FAYLLAR SİYAHISI */
+.files-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: rgba(78, 205, 196, 0.05);
+  border: 1px solid rgba(78, 205, 196, 0.12);
+  border-radius: 6px;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.file-name {
+  font-size: 12px;
+  color: #E8F4F3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-size {
+  font-size: 11px;
+  color: rgba(139, 184, 181, 0.5);
+  flex-shrink: 0;
+}
+
+.file-remove {
+  background: none;
+  border: none;
+  color: rgba(255, 107, 107, 0.6);
+  cursor: pointer;
+  padding: 4px;
+  font-size: 12px;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.file-remove:hover {
+  color: #ff6b6b;
+  transform: scale(1.2);
+}
+
+/* XƏTA */
+.task-form-error {
+  color: #ff6b6b;
+  font-size: 12px;
+  margin: 0;
+  padding: 10px;
+  background: rgba(255, 107, 107, 0.08);
+  border: 1px solid rgba(255, 107, 107, 0.2);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* MODAL FOOTER */
+.task-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 18px 25px;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(78, 205, 196, 0.1);
+  flex-shrink: 0;
+}
+
+.task-cancel-btn {
+  padding: 10px 22px;
+  background: transparent;
+  color: #8BB8B5;
+  border: 1px solid rgba(78, 205, 196, 0.15);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.3s;
+}
+
+.task-cancel-btn:hover {
+  background: rgba(78, 205, 196, 0.05);
+  color: #4ECDC4;
+}
+
+.task-save-btn {
+  padding: 10px 22px;
+  background: rgba(78, 205, 196, 0.15);
+  color: #4ECDC4;
+  border: 1px solid rgba(78, 205, 196, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.task-save-btn:hover {
+  background: rgba(78, 205, 196, 0.25);
+  border-color: rgba(78, 205, 196, 0.5);
+  box-shadow: 0 4px 12px rgba(78, 205, 196, 0.15);
+}
+
+/* SCROLLBAR */
+.task-modal-body::-webkit-scrollbar,
+.shexsler-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.task-modal-body::-webkit-scrollbar-track,
+.shexsler-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.task-modal-body::-webkit-scrollbar-thumb,
+.shexsler-list::-webkit-scrollbar-thumb {
+  background: rgba(78, 205, 196, 0.2);
+  border-radius: 2px;
+}
+
+.task-modal-body::-webkit-scrollbar-thumb:hover,
+.shexsler-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(78, 205, 196, 0.4);
+}

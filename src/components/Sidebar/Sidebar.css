@@ -1,0 +1,105 @@
+/* SİDEBAR */
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background: linear-gradient(180deg, #0D2137 0%, #0F1923 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 15px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-right: 1px solid rgba(78, 205, 196, 0.1);
+}
+
+/* YUXARI HİSSƏ */
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(78, 205, 196, 0.1);
+}
+
+.avatar-icon {
+  font-size: 52px;
+  color: #4ECDC4;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 8px rgba(78, 205, 196, 0.3));
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.user-name {
+  color: #E8F4F3;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.user-role {
+  color: #4ECDC4;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border: 1px solid rgba(78, 205, 196, 0.3);
+  border-radius: 10px;
+  background-color: rgba(78, 205, 196, 0.08);
+}
+
+/* AŞAĞI HİSSƏ */
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+/* İDARƏETMƏ DÜYMƏSİ */
+.admin-btn {
+  background: rgba(78, 205, 196, 0.1);
+  color: #4ECDC4;
+  border: 1px solid rgba(78, 205, 196, 0.2);
+}
+
+.admin-btn:hover {
+  background: rgba(78, 205, 196, 0.2);
+  border-color: rgba(78, 205, 196, 0.4);
+  transform: translateY(-1px);
+}
+
+/* ÇIXIŞ DÜYMƏSİ */
+.logout-sidebar-btn {
+  background-color: rgba(255, 107, 107, 0.08);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 107, 107, 0.2);
+}
+
+.logout-sidebar-btn:hover {
+  background-color: rgba(255, 107, 107, 0.18);
+  border-color: rgba(255, 107, 107, 0.4);
+  transform: translateY(-1px);
+}

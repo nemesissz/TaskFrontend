@@ -1,0 +1,371 @@
+/* DASHBOARD ƏSAS */
+.dashboard {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #0F1923 0%, #0D2137 100%);
+}
+
+/* SAĞ ƏSAS HİSSƏ */
+.main-content {
+  margin-left: 200px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px 20px;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* HƏR BÖLMƏ */
+.bolme {
+  flex: 1;
+  border: 1px solid rgba(78, 205, 196, 0.15);
+  border-radius: 16px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* BAŞLIQ SIRASI */
+.baslig-sira {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 15px;
+  flex-shrink: 0;
+}
+
+.baslig-sira h2 {
+  text-align: center;
+  border: 1px solid rgba(78, 205, 196, 0.3);
+  padding: 8px 24px;
+  margin: 0;
+  background: rgba(78, 205, 196, 0.08);
+  color: #4ECDC4;
+  font-size: 15px;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* PLUS DÜYMƏSİ */
+.plus-btn {
+  position: absolute;
+  right: 0;
+  background: rgba(78, 205, 196, 0.1);
+  border: 1px solid rgba(78, 205, 196, 0.3);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #4ECDC4;
+  transition: all 0.3s;
+}
+
+.plus-btn:hover {
+  background: rgba(78, 205, 196, 0.2);
+  border-color: rgba(78, 205, 196, 0.6);
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(78, 205, 196, 0.2);
+}
+
+/* İÇƏRİK */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0;
+}
+
+/* TAPŞIRIQ KARTI */
+.task-item {
+  border: 1px solid rgba(78, 205, 196, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.task-item:hover {
+  border-color: rgba(78, 205, 196, 0.25);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* TAPŞIRIQ BAŞLIĞI */
+.task-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(78, 205, 196, 0.08);
+  background: rgba(78, 205, 196, 0.03);
+}
+
+.checkbox-icon {
+  font-size: 20px;
+  color: rgba(78, 205, 196, 0.5);
+  flex-shrink: 0;
+}
+
+.checkbox-icon.checked {
+  color: #4ECDC4;
+}
+
+.clickable-check {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.clickable-check:hover {
+  color: #4ECDC4;
+}
+
+.task-title {
+  flex: 1;
+  font-weight: 600;
+  font-size: 14px;
+  color: #E8F4F3;
+}
+
+/* SAĞ İKONLAR */
+.task-right-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.task-right-icons .edit-task-icon {
+  font-size: 18px;
+  color: rgba(78, 205, 196, 0.6);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.task-right-icons .edit-task-icon:hover {
+  color: #4ECDC4;
+  transform: scale(1.15);
+}
+
+.task-right-icons .info-icon {
+  font-size: 18px;
+  cursor: pointer;
+  color: rgba(78, 205, 196, 0.6);
+  transition: all 0.2s;
+}
+
+.task-right-icons .info-icon:hover {
+  color: #4ECDC4;
+  transform: scale(1.15);
+}
+
+/* TAPŞIRIQ MƏLUMATI */
+.task-body {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.task-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.label {
+  font-weight: 600;
+  color: #8BB8B5;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.value {
+  color: #E8F4F3;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* ŞƏXSLƏR KVADRATLARı */
+.shexs-kvadratlar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.shexs-kvadrat {
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  border: 1px solid;
+}
+
+.shexs-kvadrat.status-gozlenir {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+  border-color: rgba(255, 193, 7, 0.3);
+}
+
+.shexs-kvadrat.status-icrada {
+  background-color: rgba(0, 123, 255, 0.1);
+  color: #4da6ff;
+  border-color: rgba(0, 123, 255, 0.3);
+}
+
+.shexs-kvadrat.status-tamamlandi {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: #5dd87a;
+  border-color: rgba(40, 167, 69, 0.3);
+}
+
+/* ETİKETLƏR */
+.etiket {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.etiket-sene {
+  background-color: rgba(78, 205, 196, 0.1);
+  color: #4ECDC4;
+  border: 1px solid rgba(78, 205, 196, 0.3);
+}
+
+.etiket-sen {
+  background-color: rgba(255, 165, 0, 0.1);
+  color: #ffaa44;
+  border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.etiket-ozune {
+  background-color: rgba(150, 100, 255, 0.1);
+  color: #b088ff;
+  border: 1px solid rgba(150, 100, 255, 0.3);
+}
+
+/* ALT HİSSƏ */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+  flex-shrink: 0;
+}
+
+.tamamlanmis-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(78, 205, 196, 0.2);
+  background: rgba(78, 205, 196, 0.05);
+  color: #8BB8B5;
+  padding: 7px 16px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.tamamlanmis-btn:hover {
+  background: rgba(78, 205, 196, 0.12);
+  border-color: rgba(78, 205, 196, 0.4);
+  color: #4ECDC4;
+}
+
+/* TAMAMLANMIŞ SAYI */
+.completed-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(78, 205, 196, 0.2);
+  color: #4ECDC4;
+  font-size: 11px;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+/* BOŞ MESAJ */
+.empty-message {
+  text-align: center;
+  color: rgba(139, 184, 181, 0.4);
+  font-size: 13px;
+  padding: 30px;
+  font-style: italic;
+}
+
+/* ANİMASİYA */
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.checking-anim {
+  color: #4ECDC4;
+  animation: checkPulse 1.5s ease-in-out;
+}
+
+@keyframes checkPulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.task-item.checking {
+  animation: fadeCheck 1.5s ease-in-out;
+}
+
+@keyframes fadeCheck {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* SCROLLBAR */
+.content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 2px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: rgba(78, 205, 196, 0.2);
+  border-radius: 2px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: rgba(78, 205, 196, 0.4);
+}

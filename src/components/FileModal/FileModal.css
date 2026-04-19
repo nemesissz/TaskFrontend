@@ -1,0 +1,208 @@
+/* FILE MODAL OVERLAY */
+.file-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+  backdrop-filter: blur(3px);
+}
+
+/* FILE MODAL QUTUSU */
+.file-modal-box {
+  width: 450px;
+  max-height: 80vh;
+  background-color: #fff;
+  border: 2px solid #129990;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* BAŞLIQ */
+.file-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  background-color: #096B68;
+  flex-shrink: 0;
+}
+
+.file-modal-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.file-modal-title h3 {
+  margin: 0;
+  color: #FFFBDE;
+  font-size: 17px;
+}
+
+.file-modal-subtitle {
+  color: #90D1CA;
+  font-size: 13px;
+}
+
+.file-modal-close {
+  background: none;
+  border: 1px solid rgba(255, 251, 222, 0.5);
+  color: #FFFBDE;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.file-modal-close:hover {
+  background-color: #FFFBDE;
+  color: #096B68;
+}
+
+/* İÇƏRİK */
+.file-modal-body {
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #FFFBDE;
+  flex: 1;
+}
+
+.no-files {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  padding: 30px;
+  margin: 0;
+}
+
+/* FAYL SİYAHISI */
+.file-download-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.file-download-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  background-color: #fff;
+  border: 1px solid #90D1CA;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.file-download-item:hover {
+  border-color: #129990;
+  box-shadow: 0 2px 8px rgba(18, 153, 144, 0.15);
+}
+
+.file-download-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* FAYL TİP İKONLARI */
+.file-type-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.file-type-icon.image {
+  color: #129990;
+}
+
+.file-type-icon.pdf {
+  color: #e74c3c;
+}
+
+.file-type-icon.word {
+  color: #2b579a;
+}
+
+.file-type-icon.excel {
+  color: #217346;
+}
+
+.file-type-icon.default {
+  color: #999;
+}
+
+/* FAYL MƏLUMAT */
+.file-download-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.file-download-name {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-download-size {
+  font-size: 12px;
+  color: #999;
+}
+
+/* YÜKLƏ DÜYMƏSİ */
+.file-download-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: #129990;
+  color: #FFFBDE;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.file-download-btn:hover {
+  background-color: #096B68;
+}
+
+/* SCROLLBAR */
+.file-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.file-modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.file-modal-body::-webkit-scrollbar-thumb {
+  background: #90D1CA;
+  border-radius: 3px;
+}
+
+.file-modal-body::-webkit-scrollbar-thumb:hover {
+  background: #129990;
+}
